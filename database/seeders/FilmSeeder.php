@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Film;
 use Illuminate\Database\Seeder;
 
 class FilmSeeder extends Seeder
@@ -13,6 +14,9 @@ class FilmSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Film::factory()
+            ->count(5)
+            ->create();
+        $this->command->info('Film table loaded with data!');
     }
 }

@@ -15,7 +15,6 @@ class CreateGengeFilmsTable extends Migration
     {
         Schema::create('genge_films', function (Blueprint $table) {
             $table->id();
-
             $table->bigInteger('genre_id')->unsigned();
             $table->bigInteger('film_id')->unsigned();
 

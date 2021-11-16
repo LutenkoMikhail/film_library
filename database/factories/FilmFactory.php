@@ -15,7 +15,8 @@ class FilmFactory extends Factory
     {
         return [
             'name' => $this->faker->sentence(5, true),
-
+            'published' => $this->faker->randomElement([false, true]),
+            'poster' => $this->faker->image('public/storage/images/posters', 200, 200, null, true)
         ];
     }
 }
